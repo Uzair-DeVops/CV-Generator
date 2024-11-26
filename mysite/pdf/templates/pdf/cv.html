@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - {{ user_profile.name }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+        
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-blue-600">{{ user_profile.name }}</h1>
+            <p class="text-xl text-gray-600 mt-2">Email : {{ user_profile.email }}  <br/>  Phone Number : {{ user_profile.phone }}</p>
+        </header>
+
+        <!-- Summary Section -->
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-blue-500">Summary</h2>
+            <p class="mt-2 text-lg">{{ user_profile.summary }}</p>
+            <hr class="my-4 border-t-2 border-gray-300">
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-blue-500">Skills</h2>
+            <p class="mt-2 text-lg">{{ user_profile.skills }}</p>
+            <hr class="my-4 border-t-2 border-gray-300">
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-blue-500">Education</h2>
+            <ul class="list-inside list-disc mt-2 text-lg">
+                <li>{{ user_profile.school }}</li>
+                <li>{{ user_profile.degree }} from {{ user_profile.university }}</li>
+            </ul>
+            <hr class="my-4 border-t-2 border-gray-300">
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-blue-500">Previous Work</h2>
+            <p class="mt-2 text-lg">{{ user_profile.previous_work }}</p>
+            <hr class="my-4 border-t-2 border-gray-300">
+        </section>
+
+    </div>
+
+</body>
+</html>
